@@ -10,7 +10,7 @@ package com.ding.game.animation
     public class SceneAnimation 
     {
         public static function run(scene1:Scene, scene2:Scene, 
-            transition:String = null, onComplete:Function = null):void
+            transition:String = null, duration:Number, onComplete:Function = null):void
         {
             var tween:Tween;
             
@@ -31,7 +31,7 @@ package com.ding.game.animation
             function fade():void
             {
                 scene2.alpha = 0;
-                tween = new Tween(scene2, 0.3);
+                tween = new Tween(scene2, duration);
                 tween.fadeTo(1.0);
                 tween.onComplete = complete;
                 Starling.juggler.add(tween);
@@ -41,7 +41,7 @@ package com.ding.game.animation
             {
                 scene2.x = -Starling.current.stage.stageWidth;
                 scene2.y = 0;
-                tween = new Tween(scene2, 0.3);
+                tween = new Tween(scene2, duration);
                 tween.moveTo(0, 0);
                 tween.onComplete = complete;
                 Starling.juggler.add(tween);
@@ -51,7 +51,7 @@ package com.ding.game.animation
             {
                 scene2.x = Starling.current.stage.stageWidth;
                 scene2.y = 0;
-                tween = new Tween(scene2, 0.3);
+                tween = new Tween(scene2, duration);
                 tween.moveTo(0, 0);
                 tween.onComplete = complete;
                 Starling.juggler.add(tween);
@@ -61,7 +61,7 @@ package com.ding.game.animation
             {
                 scene2.x = 0;
                 scene2.y = -Starling.current.stage.stageHeight;
-                tween = new Tween(scene2, 0.3);
+                tween = new Tween(scene2, duration);
                 tween.moveTo(0, 0);
                 tween.onComplete = complete;
                 Starling.juggler.add(tween);
@@ -71,7 +71,7 @@ package com.ding.game.animation
             {
                 scene2.x = 0;
                 scene2.y = Starling.current.stage.stageHeight;
-                tween = new Tween(scene2, 0.3);
+                tween = new Tween(scene2, duration);
                 tween.moveTo(0, 0);
                 tween.onComplete = complete;
                 Starling.juggler.add(tween);

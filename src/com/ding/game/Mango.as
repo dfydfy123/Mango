@@ -65,7 +65,7 @@ package com.ding.game
             _scenes[name] = cls;
         }
         
-        public function replaceScene(name:String, transition:String = null):void
+        public function replaceScene(name:String, transition:String = null, duration:Number = 0.3):void
         {
             var cls:Class = _scenes[name];
             if (!cls) return;
@@ -81,7 +81,8 @@ package com.ding.game
             scene.enter();
             
             if (_currentScene)
-                SceneAnimation.run(_currentScene, scene, transition, complete);
+                SceneAnimation.run(_currentScene, scene, 
+                    transition, duration, complete);
             else
                 complete();
             
