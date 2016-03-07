@@ -1,7 +1,7 @@
-package com.ding.game 
+package com.mango 
 {
-    import com.ding.game.animation.SceneAnimation;
-    import com.ding.game.core.Scene;
+    import com.mango.animation.SceneAnimation;
+    import com.mango.core.Scene;
     import flash.display.Stage;
     import flash.events.Event;
     import flash.geom.Rectangle;
@@ -76,6 +76,7 @@ package com.ding.game
             var scene:Scene;
             scene = new cls() as Scene;
             scene.name = name;
+            scene.mango = this;
             scene.assets = _assets;
             root.addChild(scene);
             scene.enter();

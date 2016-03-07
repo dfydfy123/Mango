@@ -1,5 +1,6 @@
-package com.ding.game.core 
+package com.mango.core 
 {
+    import com.mango.Mango;
     import starling.display.Sprite;
     import starling.events.KeyboardEvent;
     import starling.utils.AssetManager;
@@ -9,6 +10,7 @@ package com.ding.game.core
      */
     public class Scene extends Sprite
     {
+        private var _mango:Mango;
         private var _assets:AssetManager;
         
         public function Scene() 
@@ -54,6 +56,16 @@ package com.ding.game.core
         public function set assets(value:AssetManager):void 
         {
             _assets = value;
+        }
+        
+        public function get mango():Mango 
+        {
+            return _mango;
+        }
+        
+        public function set mango(value:Mango):void 
+        {
+            _mango = value;
         }
         
     }

@@ -1,6 +1,6 @@
-package com.ding.game.animation 
+package com.mango.animation 
 {
-    import com.ding.game.core.Scene;
+    import com.mango.core.Scene;
     import starling.animation.Tween;
     import starling.core.Starling;
 	/**
@@ -10,7 +10,7 @@ package com.ding.game.animation
     public class SceneAnimation 
     {
         public static function run(scene1:Scene, scene2:Scene, 
-            transition:String = null, duration:Number, onComplete:Function = null):void
+            transition:String = null, duration:Number = 0.3, onComplete:Function = null):void
         {
             var tween:Tween;
             

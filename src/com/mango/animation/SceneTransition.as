@@ -1,4 +1,4 @@
-package com.ding.game.animation 
+package com.mango.animation 
 {
 	/**
      * ...

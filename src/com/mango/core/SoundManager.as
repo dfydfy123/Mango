@@ -1,4 +1,4 @@
-package com.ding.game.core 
+package com.mango.core 
 {
     import flash.events.Event;
     import flash.media.Sound;
@@ -7,21 +7,21 @@ package com.ding.game.core
      * ...
      * @author Ding Ding
      */
-    public class SoundManger 
+    public class SoundManager 
     {
-        private static var _current:SoundManger;
+        private static var _current:SoundManager;
         
         private var _items:Vector.<Item>;
         
-        public function SoundManger() 
+        public function SoundManager() 
         {
             _items = new Vector.<Item>();
         }
         
-        public static function get current():SoundManger 
+        public static function get current():SoundManager 
         {
             if (_current == null)
-                _current = new SoundManger();
+                _current = new SoundManager();
             return _current;
         }
         
